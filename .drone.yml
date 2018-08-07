@@ -2,6 +2,7 @@ pipeline:
   eslint:
     image: node:latest
     commands:
+      - npm install --silent
       - npm run lint
     when:
       event: [pull_request]
